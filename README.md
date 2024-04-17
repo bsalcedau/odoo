@@ -1,2 +1,2 @@
 # Odoo
-## Odoo and PgAdmin installation from repositories
+Odoo and PgAdmin installation from repositories
