@@ -2,7 +2,8 @@
 sudo apt update
 sudo apt install postgresql -y
 wget -q -P /tmp https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_amd64.deb
-sudo apt install /tmp/wkhtmltox_0.12.6.1-3.jammy_amd64.deb -y
+sudo dpkg -i --force-all /tmp/wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+sudo apt install -f -y
 wget -q -O - https://nightly.odoo.com/odoo.key | sudo gpg --dearmor -o /usr/share/keyrings/odoo-archive-keyring.gpg
 echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/17.0/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
 sudo apt-get update && sudo apt-get install odoo -y
